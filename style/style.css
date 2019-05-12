@@ -1,0 +1,14 @@
+/* Общие параметры */
+
+.container {
+    margin: 0 auto;
+    width: 1920px;
+}
+
+
+/* Header */
+
+.header {
+    padding: 40px 150px 40px 150px;
+    background-image: url(../img/header-bg.jpg);
+}
