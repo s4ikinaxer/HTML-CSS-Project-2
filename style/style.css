@@ -16,9 +16,21 @@
 
 /* Лого и меню Header */
 .header-head {
-    padding: 0px 0px 245px 0px;
+    padding: 0px 0px 280px 0px;
     display: flex;
     justify-content: center;
+}
+
+.logo-container {
+    transition: All 0.5s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.1);
+}
+
+.logo-container:active {
+    transform: scale(0.9);
 }
 
 .logo {
@@ -41,6 +53,7 @@
     color: #ffffff;
     margin: 10px 219px 0 4px;
 }
+
 
 .menu-panel {
     margin: 0;
@@ -94,7 +107,6 @@
     background-color: transparent;
     border: none;
     margin: 15px 0 0 63px;
-    content: margin auto;
 }
 
 .bag-button:hover {
@@ -143,7 +155,7 @@
     font-weight: 500;
     text-align: center;
     color: #ffffff;
-    margin: 0 0 14px 0;
+    margin: 0 0 4px 0;
 }
 
 .heading2 {
@@ -154,7 +166,7 @@
     font-weight: 800;
     text-align: center;
     color: #ffffff;
-    margin: 0 0 19px 0;
+    margin: 0 0 13px 0;
 }
 
 .heading-text {
@@ -167,7 +179,7 @@
     line-height: 1.5;
     text-align: center;
     color: #ffffff;
-    margin: 0 0 52px 0;
+    margin: 0 0 50px 0;
 }
 
 .heading-btn {
@@ -186,7 +198,8 @@
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
-    margin: 0 0 327px 0;
+    margin: 0 0 250px 0;
+    /*   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Пометка для себя */
     transition: All 0.2s ease;
 }
 
@@ -202,6 +215,7 @@
 
 
 .left-slider-btn {
+    margin-top: 100px;
     width: 40px;
     height: 73px;
     background-color: transparent;
@@ -211,6 +225,7 @@
 }
 
 .right-slider-btn {
+    margin-top: 100px;
     width: 40px;
     height: 73px;
     background-color: transparent;
