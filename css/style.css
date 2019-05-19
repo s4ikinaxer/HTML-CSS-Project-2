@@ -577,14 +577,17 @@
 .s3-articles {
     display: flex;
     flex-wrap: wrap;
-    margin: 40px 0 0 0;
+    margin: 40px 0 40px 0;
 }
 
-.s3-articles a {
+.s3-article {
     display: block;
     text-decoration: none;
     width: 370px;
     position: relative;
+    background-color: black;
+    box-sizing: border-box;
+    transition: All 0.2s ease;
 }
 
 .s3btnl {
@@ -597,10 +600,7 @@
     left: 144px;
     fill: #c7b299;
     display: none;
-}
-
-.s3-articles a:hover .s3btnl {
-    display: inherit;
+    transition: All 0.2s ease;
 }
 
 .s3btnr {
@@ -613,35 +613,16 @@
     left: 198px;
     fill: #ffffff;
     display: none;
+    transition: All 0.2s ease;
 }
 
-.s3-articles a:hover .s3btnr {
-    display: inherit;
-}
-
-.s3-articles a img {
+.s3-article-photo {
     margin: 0;
     float: left;
+    transition: All 0.2s ease;
 }
 
-.s3-articles a:hover img {
-    filter: brightness(0.5);
-}
-
-/* Перебивает ховер с появляющимися кнопками и все остальные ховеры */
-
-.s3-article1,
-.s3-article2,
-.s3-article3 {
-    margin: 0 0 30px 0;
-}
-
-.s3-article2,
-.s3-article5 {
-    margin: 0 30px 0 30px;
-}
-
-.s3-articles a div {
+.s3-article-txt-wrapper {
     background-color: #fbfaf8;
     width: 370px;
     margin: 0;
@@ -649,9 +630,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: All 0.2s ease;
 }
 
-.s3-articles a div:before {
+.s3-article-txt-wrapper:before {
     content: "";
     display: block;
     position: absolute;
@@ -659,22 +641,496 @@
     height: 10px;
     background-image: url(../img/arrow.png);
     top: -10px;
-    left: 19px
-}
-
-.s3-articles a div span {
-    display: block;
-    margin: 0 0 14px 30px;
+    left: 19px;
+    transition: All 0.2s ease;
 }
 
 .s3articleh1 {
     color: #c7b299;
     font-size: 20px;
     font-family: raleway-500;
+    display: block;
+    margin: 0 0 14px 30px;
+    transition: All 0.2s ease;
 }
 
 .s3articletxt {
     color: #d1d1d1;
     font-size: 14px;
     font-family: montserrat-300;
+    display: block;
+    margin: 0 0 14px 30px;
+    transition: All 0.2s ease;
+}
+
+.s3-article:nth-child(2),
+.s3-article:nth-child(5) {
+    margin: 0 30px 0 30px;
+}
+
+.s3-article:nth-child(1),
+.s3-article:nth-child(2),
+.s3-article:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+/* Эффекты наведения */
+
+.s3-article:hover .s3btnr {
+    display: block;
+}
+
+.s3-article:hover .s3btnl {
+    display: block;
+}
+
+.s3-article:hover .s3-article-txt-wrapper {
+    background-color: #362f2d;
+}
+
+.s3-article:hover .s3articleh1 {
+    color: #ffffff;
+}
+
+.s3-article:hover .s3articletxt {
+    color: #c7b299;
+}
+
+.s3-article:hover .s3-article-photo {
+    opacity: 0.3;
+}
+
+.s3-article:hover .s3-article-txt-wrapper:before {
+    display: none;
+}
+
+.s3-article:active {
+    transform: scale(0.8);
+}
+
+.s3-btn {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: inset 0px -3px 0 0 #736357;
+    background-color: #998675;
+    text-decoration: none;
+    font-family: raleway-800;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    transition: All 0.2s ease;
+    padding: 20px 0px 20px 0px;
+}
+
+.s3-btn:hover {
+    color: #998675;
+    background-color: white;
+    outline: 1px solid #998675;
+}
+
+.s3-btn:active {
+    transform: scale(0.8);
+}
+
+
+/* Секция 4 - ВИДЕО */
+
+.s4-video {
+    position: relative;
+}
+
+.s4-playmenu {
+    position: absolute;
+    top: 210px;
+    left: 685px;
+    width: 552px;
+    display: flex;
+    flex-direction: column;
+}
+
+.s4-playbtn {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0 0 44px 0;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/icon-play.png),
+        url(../img/playbtn.png);
+    background-position: 15px 15px, 0 0;
+    background-repeat: no-repeat;
+    transition: All 0.2s ease;
+    align-self: center;
+}
+
+.s4-playbtn:focus {
+    outline: none;
+    border: none;
+}
+
+.s4-playbtn:hover {
+    transform: scale(1.2);
+}
+
+.s4-playbtn:active {
+    transform: scale(0.8);
+}
+
+.s4-videoh1 {
+    margin: 0 0 29px 0;
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'raleway-500';
+}
+
+.s4-txt {
+    margin: 0 0 40px 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: center;
+    font-family: 'montserrat-300';
+}
+
+.s4-time {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #c7b299;
+    text-align: center;
+    font-family: 'montserrat-400';
+}
+
+/* Секция 5 - Айфон в руке */
+
+.s5-phhand {
+    padding: 79px 370px 0 423px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s5-photo {
+    margin: 0 29px 0 0;
+    align-self: flex-end;
+}
+
+.s5-textcontainer {
+    margin: 116px 0 0 0;
+}
+
+.s5-heading {
+    display: block;
+    font-size: 30px;
+    color: #555555;
+    text-align: left;
+    font-family: 'raleway-600';
+    margin: 0 0 40px 0;
+}
+
+.s5-text {
+    display: block;
+    font-size: 16px;
+    color: #8c8c8c;
+    text-align: left;
+    line-height: 1.75;
+    font-family: 'montserrat-300';
+    margin: 0 0 45px 0;
+}
+
+.s5-list {
+    display: block;
+    margin: 0 0 0 79px;
+    list-style-image: url(../img/ticklist.png);
+    color: #8c8c8c;
+    font-size: 16px;
+    line-height: 2;
+    font-family: 'montserrat-300';
+}
+
+/* Раздел 6 - Цифры */
+.s6-line {
+    background-image: linear-gradient(to right, #211b19, #4e3427);
+    padding: 69px 0px 92px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.s6-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px 0 0;
+}
+
+.s6-block svg {
+    fill: #c7b299;
+    align-self: center;
+    margin: 0 0 30px 0;
+}
+
+.s6-fig {
+    color: #ffffff;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'montserrat-200';
+    margin: 0 0 21px 0;
+}
+
+.s6-txt {
+    color: #c7b299;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'montserrat-300';
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+
+.s6-block:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+    align-self: center;
+    margin: 0;
+}
+
+
+/* Секция 7 Свежие посты */
+
+.s7-recent {
+    padding: 82px 374px 80px 376px;
+    display: flex;
+    flex-direction: column;
+}
+
+.s7-head {
+    color: #555555;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'raleway-600';
+    margin: 0 0 30px 0;
+}
+
+.s7-text {
+    width: 757px;
+    color: #8c8c8c;
+    line-height: 1.75;
+    text-align: center;
+    font-size: 16px;
+    align-self: center;
+    font-family: 'montserrat-300';
+    margin: 0 0 40px 0;
+}
+
+.s7-articles {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+}
+
+.s7-article {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: black;
+    outline: solid 1px #f8f8f8;
+    padding: 0;
+    margin: 0;
+}
+
+.s7-img {
+    margin: 0;
+    padding: 0;
+    transition: All 0.2s ease;
+}
+
+.s7-date {
+    width: 50px;
+    height: 35px;
+    background-color: #363636;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transition: All 0.2s ease;
+    padding: 5px;
+}
+
+.s7-date-txt {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: 'montserrat-300';
+    transition: All 0.2s ease;
+}
+
+.s7-month {
+    width: 50px;
+    height: 25px;
+    background-color: #252525;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: All 0.2s ease;
+    padding: 5px;
+}
+
+.s7-month-txt {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+    font-family: 'montserrat-300';
+    transition: All 0.2s ease;
+}
+
+.s7-caption {
+    margin: 0;
+    background-color: #FFFFFF;
+    padding: 30px 44px 33px 29px;
+    transition: All 0.2s ease;
+}
+
+.s7-img-name {
+    display: block;
+    color: #555555;
+    font-size: 20px;
+    font-family: 'raleway-500';
+    margin: 0 0 19px 0;
+    transition: All 0.2s ease;
+}
+
+.s7-img-txt {
+    display: block;
+    color: #8c8c8c;
+    font-size: 14px;
+    font-family: 'montserrat-300';
+    margin: 0 0 27px 0;
+    transition: All 0.2s ease;
+}
+
+.s7-linkbox {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.s7-rdmore {
+    text-decoration: none;
+    color: #c7b299;
+    font-size: 14px;
+    font-family: 'montserrat-300';
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+
+.s7-link-arrow {
+    width: 5px;
+    height: 8px;
+    background-image: url(../img/small-arrow.png);
+    align-self: flex-end;
+    margin: 0 0 4px 0;
+}
+
+.s7-article:hover .s7-img {
+    opacity: 0.3;
+}
+
+.s7-article:hover .s7-date {
+    background-color: #c7b299;
+}
+
+.s7-article:hover .s7-month {
+    background-color: #a48d72;
+}
+
+.s7-article:hover .s7-caption {
+    background-color: #362f2d;
+}
+
+.s7-article:hover .s7-img-name {
+    color: #c7b299;
+}
+
+.s7-article:hover .s7-img-txt {
+    color: #ffffff;
+}
+
+.s7-buttons {
+    width: 52px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.s7-button {
+    width: 22px;
+    height: 22px;
+    outline: none;
+    border: none;
+    fill: #d1d1d1;
+    transition: All 0.2s ease;
+    padding: 0;
+    background-color: transparent;
+}
+
+.s7-button:hover {
+    fill: #c7b299;
+}
+
+.s7-button:active {
+    transform: scale(0.9);
+}
+
+/* Раздел 8 - крутые логотипы */
+
+.s8-logos {
+    background-image: url(../img/logosbg.jpg);
+    padding: 140px 404px 139px 406px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s8-logo1 {
+    width: 210px;
+    height: 127px;
+    background-image: url(../img/s8-logo1.png);
+    align-self: center;
+}
+
+.s8-logo2 {
+    width: 210px;
+    height: 210px;
+    background-image: url(../img/s8-logo2.png);
+    align-self: center;
+}
+
+.s8-logo3 {
+    width: 210px;
+    height: 130px;
+    background-image: url(../img/s8-logo3.png);
+    align-self: center;
+}
+
+.s8-logo4 {
+    width: 210px;
+    height: 164px;
+    background-image: url(../img/s8-logo4.png);
+    align-self: center;
 }
