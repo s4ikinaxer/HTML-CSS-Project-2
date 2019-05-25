@@ -56,7 +56,6 @@
     src: url(../fonts/raleway/raleway-800.ttf);
 }
 
-
 .container {
     margin: 0 auto;
     width: 1920px;
@@ -70,7 +69,9 @@
     background-image: url(../img/header-bg.jpg);
 }
 
+
 /* Лого и меню Header */
+
 .header-head {
     padding: 0px 0px 280px 0px;
     display: flex;
@@ -113,7 +114,6 @@
     margin: 10px 0 0 4px;
 }
 
-
 .menu-panel {
     margin: 0;
     display: flex;
@@ -143,6 +143,15 @@
     color: #ffffff;
     text-transform: capitalize;
     text-decoration: none;
+}
+
+label,
+#menu-panel {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .menu {
+    visibility: visible;
 }
 
 .menu li a:hover {
@@ -205,6 +214,7 @@
     border-radius: 5px;
     font-family: montserrat-300;
 }
+
 
 /* Карусельная часть Header */
 
@@ -280,7 +290,6 @@
     transform: scale(0.8);
 }
 
-
 .left-slider-btn {
     margin-top: 100px;
     width: 40px;
@@ -346,8 +355,8 @@
 
 .slider-dots a:active {
     transform: scale(0.8);
-
 }
+
 
 /* Раздел 1 - Предложения */
 
@@ -377,7 +386,6 @@
     fill: #deb887;
     transition: All 0.2s ease;
 }
-
 
 .s1-s-logo1:hover span {
     color: #deb887;
@@ -418,6 +426,7 @@
     background-color: black;
 }
 
+
 /* Раздел 2 - Реализация ваших идей */
 
 .s2-yourwhishes {
@@ -450,10 +459,9 @@
     min-height: 482px;
     width: 100%;
     position: relative;
-    background: url(../img/browser-center.jpg) no-repeat top center,
-        url(../img/browser-left.jpg) no-repeat bottom left,
-        url(../img/browser-right.jpg) no-repeat bottom right;
+    background: url(../img/browser-center.jpg) no-repeat top center, url(../img/browser-left.jpg) no-repeat bottom left, url(../img/browser-right.jpg) no-repeat bottom right;
 }
+
 
 /* Рекламнй блок 1 */
 
@@ -517,6 +525,7 @@
     transform: scale(0.8);
 }
 
+
 /* Раздел 3 - Наш последний проект */
 
 .s3-latestpr {
@@ -559,7 +568,6 @@
     padding: 10px 20px 10px 20px;
     margin: 0 10px 0 0;
     border-radius: 3px;
-
 }
 
 .s3-buttons button:hover {
@@ -571,6 +579,7 @@
 .s3-buttons button:active {
     transform: scale(0.8);
 }
+
 
 /* Раздел 3 сетка текстов */
 
@@ -674,6 +683,7 @@
     margin-bottom: 30px;
 }
 
+
 /* Эффекты наведения */
 
 .s3-article:hover .s3btnr {
@@ -722,6 +732,7 @@
     color: #ffffff;
     transition: All 0.2s ease;
     padding: 20px 0px 20px 0px;
+    text-transform: uppercase;
 }
 
 .s3-btn:hover {
@@ -759,8 +770,7 @@
     outline: none;
     border: none;
     background-color: transparent;
-    background-image: url(../img/icon-play.png),
-        url(../img/playbtn.png);
+    background-image: url(../img/icon-play.png), url(../img/playbtn.png);
     background-position: 15px 15px, 0 0;
     background-repeat: no-repeat;
     transition: All 0.2s ease;
@@ -808,6 +818,7 @@
     font-family: 'montserrat-400';
 }
 
+
 /* Секция 5 - Айфон в руке */
 
 .s5-phhand {
@@ -854,7 +865,9 @@
     font-family: 'montserrat-300';
 }
 
+
 /* Раздел 6 - Цифры */
+
 .s6-line {
     background-image: linear-gradient(to right, #211b19, #4e3427);
     padding: 69px 0px 92px 0px;
@@ -952,7 +965,8 @@
     transition: All 0.2s ease;
 }
 
-.s7-date {
+.s7-date-txt {
+    display: block;
     width: 50px;
     height: 35px;
     background-color: #363636;
@@ -963,29 +977,12 @@
     border-top-right-radius: 7px;
     transition: All 0.2s ease;
     padding: 5px;
-}
-
-.s7-date-txt {
-    display: block;
     color: #ffffff;
     text-align: center;
     font-size: 24px;
     line-height: 35px;
     font-family: 'montserrat-300';
     transition: All 0.2s ease;
-}
-
-.s7-month {
-    width: 50px;
-    height: 25px;
-    background-color: #252525;
-    position: absolute;
-    top: 55px;
-    left: 20px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    transition: All 0.2s ease;
-    padding: 5px;
 }
 
 .s7-month-txt {
@@ -996,6 +993,16 @@
     line-height: 25px;
     font-family: 'montserrat-300';
     transition: All 0.2s ease;
+    width: 50px;
+    height: 25px;
+    background-color: #252525;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: All 0.2s ease;
+    padding: 5px;
 }
 
 .s7-caption {
@@ -1051,11 +1058,11 @@
     opacity: 0.3;
 }
 
-.s7-article:hover .s7-date {
+.s7-article:hover .s7-date-txt {
     background-color: #c7b299;
 }
 
-.s7-article:hover .s7-month {
+.s7-article:hover .s7-month-txt {
     background-color: #a48d72;
 }
 
@@ -1098,6 +1105,7 @@
     transform: scale(0.9);
 }
 
+
 /* Раздел 8 - крутые логотипы */
 
 .s8-logos {
@@ -1108,29 +1116,521 @@
 }
 
 .s8-logo1 {
+    display: block;
     width: 210px;
     height: 127px;
     background-image: url(../img/s8-logo1.png);
     align-self: center;
+    transition: All 0.2s ease;
 }
 
 .s8-logo2 {
+    display: block;
     width: 210px;
     height: 210px;
     background-image: url(../img/s8-logo2.png);
     align-self: center;
+    transition: All 0.2s ease;
 }
 
 .s8-logo3 {
+    display: block;
     width: 210px;
     height: 130px;
     background-image: url(../img/s8-logo3.png);
     align-self: center;
+    transition: All 0.2s ease;
 }
 
 .s8-logo4 {
+    display: block;
     width: 210px;
     height: 164px;
     background-image: url(../img/s8-logo4.png);
     align-self: center;
+    transition: All 0.2s ease;
+}
+
+.s8-logo1:hover,
+.s8-logo2:hover,
+.s8-logo3:hover,
+.s8-logo4:hover {
+    transform: scale(1.2);
+}
+
+.s8-logo1:active,
+.s8-logo2:active,
+.s8-logo3:active,
+.s8-logo4:active {
+    transform: scale(0.8);
+}
+
+
+/* Футер часть 1 */
+
+.fs1-top {
+    margin: 0;
+    padding: 80px 374px 81px 376px;
+    background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fs1-article {
+    margin: 0 0 0 0;
+    width: 258px;
+}
+
+.fs1-logo-container {
+    transition: All 0.5s ease;
+    margin: 0 0 29px 0;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.fs1-logo-container:hover {
+    transform: scale(1.1);
+}
+
+.fs1-logo-container:active {
+    transform: scale(0.9);
+}
+
+.fs1-logo {
+    display: block;
+    margin: 0;
+    height: 56px;
+    width: 64px;
+    background-image: url(../img/logo.png)
+}
+
+.fs1-logo-name {
+    display: block;
+    margin: 0;
+    text-transform: capitalize;
+    font-family: raleway-400;
+    font-size: 34px;
+    letter-spacing: -1.4px;
+    color: #ffffff;
+    margin: 10px 0 0 4px;
+}
+
+.fs1-article-txt {
+    display: block;
+    margin: 0 0 33px 0;
+    font-size: 14px;
+    color: #555555;
+    font-family: 'montserrat-300';
+    text-align: left;
+}
+
+.fs1-linkbox {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    transition: All 0.5s ease;
+}
+
+.fs1-article-link {
+    display: block;
+    margin: 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: #d1d1d1;
+    font-family: 'montserrat-400';
+    padding: 0 10px 0 0;
+}
+
+.fs1-link-arrow {
+    width: 5px;
+    height: 8px;
+    background-image: url(../img/small-arrow2.png);
+    align-self: flex-end;
+    margin: 0 0 4px 0;
+}
+
+.fs1-linkbox:hover {
+    transform: scale(1.2);
+}
+
+.fs1-linkbox:active {
+    transform: scale(0.8);
+}
+
+
+/* Recent Posts */
+
+.fs1-recent {
+    width: 260px;
+    margin: 0 0 0 0;
+}
+
+.fs1-recent-h1 {
+    display: block;
+    margin: 20px 0 33px 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'raleway-700';
+}
+
+.fs1-recent-link {
+    display: block;
+    text-decoration: none;
+}
+
+.fs1-recent-time {
+    display: block;
+    margin: 0 0 10px 0;
+    color: #363636;
+    font-size: 12px;
+    font-family: 'montserrat-300';
+}
+
+.fs1-recent-txt {
+    display: block;
+    margin: 0 0 21px 0;
+    color: #555555;
+    font-size: 14px;
+    font-family: 'montserrat-300';
+}
+
+.fs1-recent-txt2 {
+    display: block;
+    margin: 0 0 0 0;
+    color: #555555;
+    font-size: 14px;
+    font-family: 'montserrat-300';
+}
+
+.fs1-recent-txt:after {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 2px;
+    background-color: #252525;
+    margin: 21px 0 0 0;
+}
+
+.fs1-recent-link:hover .fs1-recent-time {
+    color: #ffffff;
+}
+
+.fs1-recent-link:hover .fs1-recent-txt {
+    color: #c7b299;
+}
+
+.fs1-recent-link:hover .fs1-recent-txt2 {
+    color: #c7b299;
+}
+
+
+/* Our twitter */
+
+.fs1-twitter {
+    width: 264px;
+    margin: 0 0 0 0;
+}
+
+.fs1-twitter-post:after {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 2px;
+    background-color: #252525;
+    margin: 21px 0 0 0;
+}
+
+.fs1-twitter-txt {
+    display: block;
+    margin: 17px 0 11px 0;
+    font-size: 14px;
+    color: #555555;
+    font-family: 'montserrat-300';
+}
+
+.fs1-twitter-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #00bff3;
+    font-family: 'montserrat-300';
+}
+
+.fs1-twitter-time {
+    display: block;
+    margin: 0 0 0 0;
+    color: #363636;
+    font-size: 12px;
+    font-family: 'montserrat-300';
+}
+
+
+/* Dribbble widget */
+
+.fs1-widget-block {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fs1-widget-block img:nth-child(3) {
+    margin: 10px 0 0 0;
+}
+
+.fs1-widget-block img:nth-child(4) {
+    margin: 10px 0 0 0;
+}
+
+
+/* Футер футера */
+
+.fs2-bottom {
+    padding: 45px 374px 52px 376px;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+}
+
+.fs2-bottom-ln {
+    display: flex;
+    margin: 0px 0px 0 10px;
+    padding: 0;
+    text-decoration: none;
+    font-size: 13px;
+    color: #555555;
+    font-family: 'montserrat-300';
+}
+
+.fs2-bottom-l4 {
+    margin: 0 400px 0 10px;
+}
+
+.fs2-bottom-ln a {
+    text-decoration: none;
+    color: #959595;
+    font-family: 'montserrat-300';
+    font-size: 13px;
+    padding: 0 0 0 3px;
+}
+
+.fs2-bottom-l2:hover,
+.fs2-bottom-l3:hover,
+.fs2-bottom-l4:hover {
+    color: #c7b299;
+}
+
+.fs2-bottom-ln a:hover {
+    color: #c7b299;
+}
+
+.fs2-bottom-l1:after,
+.fs2-bottom-l2:after,
+.fs2-bottom-l3:after,
+.fs2-bottom-l5:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 14px;
+    background-color: #555555;
+    margin: 0 0 0px 10px;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+@media (max-width: 575.98px) {
+    .container {
+        margin: 0 auto;
+        width: 576px;
+    }
+    /* Header */
+    .header {
+        padding: 30px 10px 30px 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /* Лого и меню Header */
+    .header-head {
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-container {
+        padding: 0;
+    }
+    .menu-panel {
+        flex-direction: column;
+        display: none;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .menu li a {
+        padding: 10px 0 10px 0px;
+        border: solid 1px white;
+        width: 200px;
+        text-align: center;
+    }
+    label {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        background-image: url('https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/menu-128.png');
+        background-size: 100%;
+    }
+    #menu-panel {
+        display: none;
+    }
+    #menu-panel:checked ~ .menu-panel {
+        display: inherit;
+    }
+    .bag-button {
+        margin: 0px 0 0 0px;
+        align-self: center;
+    }
+    .search-container {
+        width: 200px;
+        margin: 0px 0 0 0px;
+        border: solid 1px white;
+    }
+    .header-slider {
+        display: none;
+    }
+    /* Раздел 1 - Предложения */
+    .s1-supply {
+        padding: 30px 20px 0px 20px;
+        flex-wrap: wrap;
+    }
+    .s1-s-logo1 {
+        margin: 0 0 30px 0;
+    }
+    .s2-yourwhishes {
+        display: none;
+    }
+    .reklama1 {
+        display: none;
+    }
+    /* Раздел 3 - Наш последний проект */
+    .s3-latestpr {
+        padding: 30px 10px 30px 10px;
+    }
+    .s3text {
+        width: 500px;
+    }
+    /* Раздел 3 сетка текстов */
+    .s3-articles {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin: 30px 0 30px 0;
+    }
+    .s3-article:nth-child(4),
+    .s3-article:nth-child(5),
+    .s3-article:nth-child(6) {
+        display: none;
+    }
+    .s3-article:nth-child(1),
+    .s3-article:nth-child(2),
+    .s3-article:nth-child(3) {
+        margin: 10px auto;
+    }
+    /* Секция 4 - ВИДЕО */
+    .s4-video-video {
+        width: 576px;
+        height: 224px;
+    }
+    .s4-playmenu {
+        top: -20px;
+        left: 12px;
+        width: 552px;
+        transform: scale(0.5);
+    }
+    .s4-playbtn {
+        margin: 0 0 10px 0;
+    }
+    /* Секция 5 - Айфон в руке */
+    .s5-phhand {
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+    .s5-photo {
+        margin: 0 0px 0 0;
+        align-self: flex-end;
+        float: right;
+        width: 350px;
+        height: 500px;
+        align-self: center;
+    }
+    .s5-textcontainer {
+        margin: 0px 0 0 0;
+    }
+    .s5-list {
+        margin: 0 0 20px 0px;
+    }
+    /* Раздел 6 - Цифры */
+    .s6-line {
+        padding: 10px 0px 10px 0px;
+    }
+    .s6-block {
+        margin: 0 10px 0 0;
+        transform: scale(0.7);
+    }
+    .s6-block svg {
+        margin: 0 0 10px 0;
+    }
+    .s6-fig {
+        margin: 0 0 10px 0;
+    }
+    .s6-txt {
+        margin: 0 0 10px 0;
+    }
+    /* Секция 7 Свежие посты */
+    .s7-article {
+        margin: 0 0 10px 0;
+    }
+    .s7-text {
+        width: 500px;
+    }
+    .s7-recent {
+        padding: 30px 0px 30px 0px;
+    }
+    .s7-articles {
+        flex-direction: column;
+        margin: auto;
+    }
+    /* Раздел 8 - крутые логотипы */
+    .s8-logos {
+        padding: 0px 0px 0px 0px;
+        justify-content: space-between;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+    .s8-logo1,
+    .s8-logo2,
+    .s8-logo3,
+    .s8-logo4 {
+        transform: scale(0.7);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0;
+        height: 147px;
+    }
+    /* Футер часть 1 */
+    .fs1-top {
+        display: none;
+    }
+    /* Футер футера */
+    .fs2-bottom {
+        padding: 30px 30px 30px 30px;
+        background-color: #111111;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .fs2-bottom-l4 {
+        margin: 0px 10px 10px 10px;
+    }
 }
